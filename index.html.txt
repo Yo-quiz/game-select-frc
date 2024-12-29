@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Select (Español)</title>
+    <title>Game Select (Français)</title>
     <style>
         html, body {
             margin: 0;
@@ -57,14 +57,14 @@
     <img src="yoquiz.png" alt="Yo-Quiz Logo" class="logo">
 
     <!-- Texto debajo del logo -->
-    <h2>Selecciona el juego</h2>
+    <h2>Sélectionner un jeu</h2>
 
     <!-- Selección de juegos -->
     <div class="game-selection">
-        <a href="https://yo-quiz.github.io/esp-yw1">
+        <a href="https://yo-quiz.github.io/frc-yw1">
             <img src="YW1.png" alt="Yo-kai Watch 1" class="yw1">
         </a>
-        <a href="https://yo-quiz.github.io/esp-yw2">
+        <a href="https://yo-quiz.github.io/frc-yw2">
             <img src="YW2.png" alt="Yo-kai Watch 2" class="yw2">
         </a>
     </div>
