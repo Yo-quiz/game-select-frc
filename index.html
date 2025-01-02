@@ -5,23 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Select (Français)</title>
     <style>
+        /* Asegura que el fondo sea de un color sólido */
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Asegura que html y body ocupen toda la pantalla */
-            background: linear-gradient(to bottom, #00aaff, #006699); /* Gradiente azul claro a oscuro */
-            background-size: cover; /* Cubre toda el área disponible */
+            height: 100%; /* Asegura que el fondo cubra toda la pantalla */
+            background-color: #0088cc;
             font-family: Arial, sans-serif;
+            box-sizing: border-box; /* Para que el padding no afecte al tamaño */
+        }
+
+        body {
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
-            justify-content: center; /* Centra verticalmente el contenido */
-            text-align: center; /* Asegura que el texto esté centrado */
+            min-height: 100%; /* Extiende el fondo si el contenido es más alto que la ventana */
+            padding: 0; /* Elimina el padding del body */
         }
 
         img.logo {
-            width: 40%; /* Tamaño del logo al 40% */
-            height: auto; /* Mantiene las proporciones */
+            width: 20%;
+            height: auto;
+            margin-top: 1rem;
         }
 
         h2 {
@@ -30,25 +36,39 @@
             margin: 1rem 0;
         }
 
+        /* Contenedor de selección de juegos */
         .game-selection {
             display: flex;
-            justify-content: center; /* Centra las imágenes horizontalmente */
+            justify-content: center;
             align-items: center;
-            gap: 2rem; /* Espacio entre las imágenes */
-            margin-top: 1rem;
+            gap: 1rem; /* Espaciado entre imágenes */
+            flex-wrap: wrap; /* Permite que las imágenes se reorganicen en filas o columnas */
+            padding: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            flex-grow: 1; /* Hace que el contenedor crezca para llenar el espacio disponible */
         }
 
         .game-selection img {
-            height: auto; /* Mantiene las proporciones */
+            width: 150px; /* Tamaño inicial de las imágenes */
+            height: auto;
             cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        .game-selection img.yw1 {
-            width: 50%; /* Tamaño del yw1.png al 50% */
+        .game-selection img:hover {
+            transform: scale(1.1); /* Efecto de zoom suave */
         }
 
-        .game-selection img.yw2 {
-            width: 60%; /* Tamaño del yw2.png al 60% */
+        /* Media query para pantallas más pequeñas */
+        @media (max-width: 800px) {
+            .game-selection {
+                flex-direction: column; /* Cambia a columna si la pantalla es estrecha */
+                align-items: center; /* Centra las imágenes en columnas */
+            }
+            .game-selection img {
+                width: 200px; /* Ajusta el tamaño para pantallas pequeñas */
+            }
         }
     </style>
 </head>
@@ -62,10 +82,22 @@
     <!-- Selección de juegos -->
     <div class="game-selection">
         <a href="https://yo-quiz.github.io/frc-yw1">
-            <img src="YW1.png" alt="Yo-kai Watch 1" class="yw1">
+            <img src="YW1.png" alt="Yo-kai Watch 1">
         </a>
         <a href="https://yo-quiz.github.io/frc-yw2">
-            <img src="YW2.png" alt="Yo-kai Watch 2" class="yw2">
+            <img src="YW2.png" alt="Yo-kai Watch 2">
+        </a>
+        <a href="https://yo-quiz.github.io/frc-yw3">
+            <img src="yw3.png" alt="Yo-kai Watch 3">
+        </a>
+        <a href="https://yo-quiz.github.io/frc-yw4">
+            <img src="yw4.png" alt="Yo-kai Watch 4">
+        </a>
+        <a href="https://yo-quiz.github.io/frc-ywb">
+            <img src="ywb.png" alt="Yo-kai Watch Blasters">
+        </a>
+        <a href="https://yo-quiz.github.io/frc-yb2">
+            <img src="yb2.png" alt="Yo-kai Watch Busters 2">
         </a>
     </div>
 </body>
