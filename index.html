@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Select (Français)</title>
-    <style>
-        /* Asegura que el fondo sea de un color sólido */
+     <style>
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%; /* Asegura que el fondo cubra toda la pantalla */
+            height: 100%;
             background-color: #0088cc;
             font-family: Arial, sans-serif;
-            box-sizing: border-box; /* Para que el padding no afecte al tamaño */
+            box-sizing: border-box;
         }
 
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
-            min-height: 100%; /* Extiende el fondo si el contenido es más alto que la ventana */
-            padding: 0; /* Elimina el padding del body */
         }
 
         img.logo {
             width: 20%;
-            height: auto;
             margin-top: 1rem;
         }
 
@@ -36,69 +31,112 @@
             margin: 1rem 0;
         }
 
-        /* Contenedor de selección de juegos */
+        /* Juegos principales */
         .game-selection {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 1rem; /* Espaciado entre imágenes */
-            flex-wrap: wrap; /* Permite que las imágenes se reorganicen en filas o columnas */
+            gap: 1rem;
+            flex-wrap: wrap;
             padding: 1rem;
-            width: 100%;
-            box-sizing: border-box;
-            flex-grow: 1; /* Hace que el contenedor crezca para llenar el espacio disponible */
         }
 
         .game-selection img {
-            width: 150px; /* Tamaño inicial de las imágenes */
-            height: auto;
+            width: 150px;
             cursor: pointer;
             transition: transform 0.2s;
         }
 
         .game-selection img:hover {
-            transform: scale(1.1); /* Efecto de zoom suave */
+            transform: scale(1.1);
         }
 
-        /* Media query para pantallas más pequeñas */
+        /* Hileras de iconos */
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        .icon-item {
+            text-align: center;
+            width: 100px;
+        }
+
+        .icon-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .icon-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .icon-item span {
+            display: block;
+            color: white;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+        }
+
         @media (max-width: 800px) {
-            .game-selection {
-                flex-direction: column; /* Cambia a columna si la pantalla es estrecha */
-                align-items: center; /* Centra las imágenes en columnas */
-            }
-            .game-selection img {
-                width: 200px; /* Ajusta el tamaño para pantallas pequeñas */
+            img.logo {
+                width: 40%;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Logo principal -->
+
     <img src="yoquiz.png" alt="Yo-Quiz Logo" class="logo">
+    <h2>Sélectionner le jeu</h2>
 
-    <!-- Texto debajo del logo -->
-    <h2>Sélectionner un jeu</h2>
-
-    <!-- Selección de juegos -->
     <div class="game-selection">
-        <a href="https://yo-quiz.github.io/frc-yw1">
-            <img src="YW1.png" alt="Yo-kai Watch 1">
-        </a>
-        <a href="https://yo-quiz.github.io/frc-yw2">
-            <img src="YW2.png" alt="Yo-kai Watch 2">
-        </a>
-        <a href="https://yo-quiz.github.io/frc-yw3">
-            <img src="yw3.png" alt="Yo-kai Watch 3">
-        </a>
-        <a href="https://yo-quiz.github.io/frc-yw4">
-            <img src="yw4.png" alt="Yo-kai Watch 4">
-        </a>
-        <a href="https://yo-quiz.github.io/frc-ywb">
-            <img src="ywb.png" alt="Yo-kai Watch Blasters">
-        </a>
-        <a href="https://yo-quiz.github.io/frc-yb2">
-            <img src="yb2.png" alt="Yo-kai Watch Busters 2">
-        </a>
+        <a href="https://yo-quiz.github.io/eng-yw1"><img src="YW1.png"></a>
+        <a href="https://yo-quiz.github.io/eng-yw2"><img src="YW2.png"></a>
+        <a href="https://yo-quiz.github.io/eng-yw3"><img src="yw3.png"></a>
+        <a href="https://yo-quiz.github.io/eng-yw4"><img src="yw4.png"></a>
+        <a href="https://yo-quiz.github.io/eng-ywb"><img src="ywb.png"></a>
+        <a href="https://yo-quiz.github.io/eng-yb2"><img src="yb2.png"></a>
+        <a href="https://yo-quiz.github.io/eng-full"><img src="full.png"></a>
     </div>
+
+    <!-- PRIMERA HILERA -->
+    <div class="icon-row">
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-vai"><img src="Valiente.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-mys"><img src="Misteriosa.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-cos"><img src="Robusta.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-mig"><img src="Guapa.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-bie"><img src="Amable.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-som"><img src="Oscura.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-sin"><img src="Siniestra.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-ins"><img src="Escurridiza.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-per"><img src="Malefica.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-enm"><img src="Enma.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-wan"><img src="Aydroide.png"></a>
+    </div>
+
+    <!-- SEGUNDA HILERA -->
+    <div class="icon-row">
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-onn"><img src="Onnen.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-gor"><img src="Goriki.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-oma"><img src="Omamori.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-mon"><img src="Mononoke.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-tsu"><img src="Tsukumono.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-uwa"><img src="Uwanosora.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-mal"><img src="Kaima.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-oni"><img src="Oni.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-iza"><img src="Izana.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-mik"><img src="Mikado.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-mkk"><img src="Mikakunin.png"></a>
+        <a class="icon-item" href="https://yo-quiz.github.io/eng-shi"><img src="Shinma.png"></a>
+    </div>
+
 </body>
 </html>
